@@ -22,6 +22,11 @@ class LeapYearTests(unittest.TestCase):
         expectedOutput = True
         self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
 
+    def testIfYearNotDivisibleBy4AreNotLeapYears(self):
+        year = 2002
+        expectedOutput = False
+        self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
+
 
 if __name__=="__main__":
     unittest.main()
