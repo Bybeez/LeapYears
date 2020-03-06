@@ -17,5 +17,11 @@ class LeapYearTests(unittest.TestCase):
         expectedOutput = False
         self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
 
+    def testIfYearDivisibleBy4ButNot100AreLeapYears(self):
+        year = 2004
+        expectedOutput = True
+        self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
+
+
 if __name__=="__main__":
     unittest.main()
