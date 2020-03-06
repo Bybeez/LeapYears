@@ -12,5 +12,10 @@ class LeapYearTests(unittest.TestCase):
         expectedOutput = True
         self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
 
+    def testIfYearDivisibleBy100ButNot400ReturnFalse(self):
+        year = 300
+        expectedOutput = False
+        self.assertEqual(LeapYear.isLeapYear(year), expectedOutput)
+
 if __name__=="__main__":
     unittest.main()
